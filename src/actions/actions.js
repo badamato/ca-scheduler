@@ -1,3 +1,4 @@
+//importing global variables from actions folder
 import {
     TOGGLE_TEXT,
     SELECT_BOOKING,

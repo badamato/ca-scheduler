@@ -1,7 +1,8 @@
+//importing global variables from actions folder
 import {
-    TOGGLE_DIALOG,
-    SELECT_APPOINTMENT,
-    UPDATE_APPOINTMENT,
+    TOGGLE_TEXT,
+    SELECT_BOOKING,
+    UPDATE_BOOKING,
     UPDATE_FORM
 } from '../actions/actionTypes';
 
@@ -9,7 +10,7 @@ import {
 // not able to create a combined reducer
 export default function rootReducer(state = getInitialState(), action) {
     switch (action.type) {
-        case TOGGLE_DIALOG:
+        case TOGGLE_TEXT:
             let newState = {
                 ...state,
                 open: !state.open
@@ -17,21 +18,21 @@ export default function rootReducer(state = getInitialState(), action) {
             localStorage.setItem('data', JSON.stringify(newState));
             return newState
 
-        case SELECT_APPOINTMENT:
+        case SELECT_BOOKING:
             return {
                 ...state,
-                selectedAppointment: action.payload
+                selectedBooking: action.payload
             }
         case UPDATE_FORM:
             return {
                 ...state,
-                selectedAppointment: action.payload
+                selectedBooking: action.payload
             };
 
-        case UPDATE_APPOINTMENT:
+        case UPDATE_BOOKING:
             return {
                 ...state,
-                appointmentData: action.payload.appointmentData
+                bookingData: action.payload.bookingData
             }
 
         default:
@@ -40,7 +41,7 @@ export default function rootReducer(state = getInitialState(), action) {
 }
 
 const getInitialState = () => {
-    var localData = JSON.parse(localStorage.getItem('data'));
+    let localData = JSON.parse(localStorage.getItem('data'));
     if (localData) {
         return localData
     } else {
@@ -49,7 +50,7 @@ const getInitialState = () => {
 }
 
 const initialState = {
-    appointmentData: [{
+    bookingData: [{
         time: "9:00am-10:00am",
         name: "John Doe",
         phone: 5554035521,
@@ -99,7 +100,7 @@ const initialState = {
     },
     ],
     open: false,
-    selectedAppointment: {
+    selectedBooking: {
         time: '',
         name: '',
         phone: '',
