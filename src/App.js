@@ -11,7 +11,7 @@ class App extends Component {
         <AppBar className='appbar' color='white' position='static'>
           <img className='logo' src={require('./images/calogo.jpeg')} alt='logo ' />
         </AppBar>
-        <Typography variant='h4' component='h6'>React & Redux Booking Scheduler</Typography>
+        {/* <Typography variant='h4' component='h6'>React & Redux Booking Scheduler</Typography> */}
       </div>
     )
   }

@@ -7,7 +7,7 @@ import Divider from '@material-ui/core/Divider';
 class BookingItem extends Component {
     render() {
         let status = this.props.available ? 'active' : 'booked';
-        let name = this.props.name ? this.props.name : 'Open';
+        let name = this.props.name ? this.props.name : 'Available';
         let phone = this.props.phone ? ` | ${this.props.phone}` : '';
 
         return (

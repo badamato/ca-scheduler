@@ -14,6 +14,10 @@ code {
         monospace;
 }
 
+.App {
+    text-align: center;
+}
+
 .appbar {
     height: 90px;
     display: flex;
