@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f6f6f6;
+    background-color: #f1f1f1;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
         "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
         sans-serif;
@@ -14,15 +14,15 @@ code {
         monospace;
 }
 
-.navbar {
-    background-color: white;
-    height: 80px;
+.appbar {
+    height: 90px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .logo {
     height: 80px;
     width: 210px;
+    margin-bottom: 5px;
 }

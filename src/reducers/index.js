@@ -5,7 +5,8 @@ import {
     UPDATE_FORM
 } from '../actions/actionTypes';
 
-// just using 1 reducer since so few things to keep track of..
+// because I only have one reducer on this small application,
+// not able to create a combined reducer
 export default function rootReducer(state = getInitialState(), action) {
     switch (action.type) {
         case TOGGLE_DIALOG:

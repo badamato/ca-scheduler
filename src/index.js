@@ -5,7 +5,7 @@ import App from './App';
 //bringing in my store setup file and calling it Store
 import Store from './store';
 
-//defining my store function to pass to the provider
+//defining my store function to pass to the Provider
 const store = Store();
 
 ReactDOM.render(
