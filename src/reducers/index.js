@@ -52,9 +52,9 @@ const getInitialState = () => {
 const initialState = {
     bookingData: [{
         time: "9:00am-10:00am",
-        name: "John Doe",
-        phone: 5554035521,
-        available: false
+        name: '',
+        phone: '',
+        available: true
     },
     {
         time: "10:00am-11:00am",
