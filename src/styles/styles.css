@@ -31,6 +31,33 @@ code {
     margin-bottom: 5px;
 }
 
+.dashboard-container {
+    height: 550px;
+    width: 60%;
+    margin: 120px auto
+}
+
+.title {
+    padding-top: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #005188
+}
+
+.dashboard {
+    width: 85%;
+    margin: 40px auto;
+    background-color: white;
+}
+
+.active {
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
+}
+
 .booked {
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
     background-color: #ffb2b2;
 }
