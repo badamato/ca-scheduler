@@ -1,7 +1,7 @@
 # Booking Application
 
 <p align='center'>
-    <img src='images/mvp.png' alt='screenshot'></img>
+    <img src='src/images/mvp.png' alt='screenshot'></img>
 </p>
 
 # [Live Demo](http://www.gearshakedown.net/)
