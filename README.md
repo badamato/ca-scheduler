@@ -6,6 +6,6 @@
 
 # [Live Demo](http://www.gearshakedown.net/)
 
+This project was built using Reactjs and Redux.  Clone the repo, change into the project folder, run NPM INSTALL to install the build packages, then NPM START to start the UI on localhost:3000.
 
-## MVPmv
-Build a screen which shows a list of hour long slots from 9am to 5pm.  When one time slot is clicked, pop up a modal which asks for name and phone number.  When the name and phone number have been submitted, the time slot selected should change to red indicating the time slot is no longer available.  If the red time slot is clicked on again, the modal will pop up with the name and phone number for that appointment pre-populated.  Uswers will be able to edit the name and phone number to change the user for the appointment.
+Displaying a list of hour-long slots from 9am to 5pm, when one slot is clicked a modal form pops up which asks the user to enter their name and phone number.  When their name and phone number have been submitted, the time slot selected will change to red indicating it is no longer available.  Clicking on the red time slot again, the modal will pop up with the name and phone number for that appointment pre-populated.  Users can edit their information to change the appointment.
