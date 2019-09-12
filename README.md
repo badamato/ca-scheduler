@@ -1,9 +1,5 @@
 # Booking Application
 
-<p align='center'>
-    <img src='src/images/mvp.png' alt='screenshot'></img>
-</p>
-
 # [Live Demo](http://www.gearshakedown.net/)
 
 This project was built using Reactjs and Redux.  Clone the repo, change into the project folder, run `NPM INSTALL` to install the build packages, then `NPM START` to start the UI on localhost:3000.
