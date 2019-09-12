@@ -15,7 +15,6 @@ import BookingForm from './BookingForm';
 import * as Actions from '../actions/actions';
 
 
-
 class Dashboard extends Component {
 
     _openModalForm = (bookingItem) => {
@@ -32,12 +31,38 @@ class Dashboard extends Component {
             ...this.props.selectedBooking,
             [e.target.id]: e.target.value
         } 
-
         this.props.action.updateForm(newSelectedBooking);
     }
 
     _handleSave = () => {
+        let updatedBooking;
 
+        //conditionally render a selected booking to be colored red
+        if (this.props.selectedBooking.name !== '' || 
+        this.props.selectedBooking.phone !== '') {
+            updatedBooking = {
+                ...this.props.selectedBooking,
+                available: false
+            };
+        } else {
+            updatedBooking = {
+                ...this.props.selectedBooking,
+                available: true
+            };
+        }
+
+        //find the selected booking and replace it in the initial booking array
+        //NOTE:  received help from another dev/friend
+        let newBookingDataArray = this.props.bookingData.map(booking => {
+            if (booking.time === this.props.selectedBooking.time) {
+                return updatedBooking;
+            } else {
+                return booking;
+            }
+        });
+
+        this.props.action.updateBooking(newBookingDataArray);
+        this.props.action.toggleText();
     }
 
     render() {

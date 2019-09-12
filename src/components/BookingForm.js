@@ -50,10 +50,10 @@ class BookingForm extends Component {
                     <DialogActions>
                         <Button onClick={this.props.handleClose} color="primary">
                             Cancel
-                </Button>
+                    </Button>
                         <Button onClick={this.props.handleSave} color="primary" disabled={!isEnabled}>
                                 Save
-                </Button>
+                    </Button>
                     </DialogActions>
                 </Dialog>
             </div>

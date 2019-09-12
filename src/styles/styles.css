@@ -30,3 +30,7 @@ code {
     width: 210px;
     margin-bottom: 5px;
 }
+
+.booked {
+    background-color: #ffb2b2;
+}
