@@ -52,7 +52,8 @@ class Dashboard extends Component {
         }
 
         //find the selected booking and replace it in the initial booking array
-        //NOTE:  received help from another dev/friend
+
+        //BETH NOTE: WHY DOES THIS WORK?  
         let newBookingDataArray = this.props.bookingData.map(booking => {
             if (booking.time === this.props.selectedBooking.time) {
                 return updatedBooking;
@@ -103,6 +104,7 @@ const mapStateToProps = (state) => ({
     selectedBooking: state.selectedBooking
 });
 
+//BENEFIT OF USING BIND ACTION CREATORS?
 const mapDispatchToProps = (dispatch) => ({
     action: bindActionCreators(Actions, dispatch)
 });

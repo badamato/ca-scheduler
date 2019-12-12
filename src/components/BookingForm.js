@@ -19,6 +19,7 @@ class BookingForm extends Component {
         return (
             <div>
                 <Dialog
+                    //OPEN COMES DOWN FROM DASHBOARD PARENT BUT WHY ISN'T CLOSE AS WELL?
                     open={this.props.open}
                     onClose={this.props.handleClose}
                 >

@@ -1,4 +1,8 @@
 //importing global variables from actions folder
+//BETH NOTE:  WHY SEPARATE THIS OUT - WHY IMPORTED AND NOT DECLARED IN THIS FILE?
+
+//actions are functions that return an object
+
 import {
     TOGGLE_TEXT,
     SELECT_BOOKING,
@@ -20,6 +24,7 @@ export const selectBooking = (bookingItem) => ({
     }
 });
 
+//WHY BOOKING DATA OUTSIDE OF PAYLOAD?
 export const updateBooking = (bookingData) => ({
     type: UPDATE_BOOKING,
     payload: {

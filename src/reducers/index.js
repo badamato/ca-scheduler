@@ -6,10 +6,10 @@ import {
     UPDATE_FORM
 } from '../actions/actionTypes';
 
-// because I only have one reducer on this small application,
-// not able to create a combined reducer
+
 export default function rootReducer(state = getInitialState(), action) {
     switch (action.type) {
+        //SWITCHING TEXT
         case TOGGLE_TEXT:
             let newState = {
                 ...state,
@@ -19,17 +19,20 @@ export default function rootReducer(state = getInitialState(), action) {
             return newState
 
         case SELECT_BOOKING:
+            //SELECTING A TIME SLOT
             return {
                 ...state,
                 selectedBooking: action.payload
             }
         case UPDATE_FORM:
+            //GETTING THE RIGHT TIME SLOT TO UPDATE
             return {
                 ...state,
                 selectedBooking: action.payload
             };
 
         case UPDATE_BOOKING:
+            //UPDATE THE BOOKING DATA ARRAY
             return {
                 ...state,
                 bookingData: action.payload.bookingData
@@ -40,6 +43,9 @@ export default function rootReducer(state = getInitialState(), action) {
     }
 }
 
+//IS THIS FOR WHEN WE RESET THE COMPONENT BACK TO INITIAL STATE?
+//EACH SESSION WILL REVIEW THE DATA ALREADY IN LOCAL STORAGE AND
+//POPULATE THE SCHEDULE BASED ON WHAT IS ALREADY TAKEN
 const getInitialState = () => {
     let localData = JSON.parse(localStorage.getItem('data'));
     if (localData) {
